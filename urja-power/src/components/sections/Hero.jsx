@@ -5,15 +5,27 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 const Hero = () => {
     return (
         <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-            {/* Background with animated gradient and texture */}
-            <div className="absolute inset-0 bg-hero-gradient z-0" />
+            {/* Video Background */}
+            <div className="absolute inset-0 z-0">
+                <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="auto"
+                    className="absolute inset-0 w-full h-full object-cover will-change-transform"
+                    style={{ transform: 'translateZ(0)' }}
+                >
+                    <source src="/hero-bg.mp4" type="video/mp4" />
+                </video>
+                {/* Dark overlay for text readability - reduced for video visibility */}
+                <div className="absolute inset-0 bg-black/35" />
+                <div className="absolute inset-0 bg-hero-gradient opacity-40" />
+            </div>
 
-            {/* Subtle moving industrial texture overlay (using pure CSS approach for texture) */}
-            <div className="absolute inset-0 opacity-20 z-0 bg-[url('https://transparenttextures.com/patterns/carbon-fibre.png')] animate-[float_20s_linear_infinite]" />
-
-            {/* Electric Glow Orbs */}
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-electric-blue/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none" />
-            <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-indigo-500/10 rounded-full blur-[150px] mix-blend-screen pointer-events-none" />
+            {/* Electric Glow Orbs - subtle so video shows through */}
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-electric-blue/10 rounded-full blur-[120px] mix-blend-screen pointer-events-none z-[1]" />
+            <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-indigo-500/5 rounded-full blur-[150px] mix-blend-screen pointer-events-none z-[1]" />
 
             <div className="container-custom relative z-10 text-center">
                 <motion.div
@@ -27,7 +39,7 @@ const Hero = () => {
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ delay: 0.2, duration: 0.5 }}
-                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 border-electric-blue/30 shadow-[0_0_15px_rgba(27,209,255,0.15)]"
+                        className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass mb-8 border-electric-blue/20 shadow-[0_0_8px_rgba(27,209,255,0.08)]"
                     >
                         <span className="w-2 h-2 rounded-full bg-electric-blue animate-pulse" />
                         <span className="text-sm font-medium tracking-wide text-gray-200">
@@ -38,7 +50,7 @@ const Hero = () => {
                     {/* Main Headline */}
                     <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
                         Powering Infrastructure with{' '}
-                        <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-400 text-glow">
+                        <span className="relative inline-block text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-400">
                             Premium
                             {/* Highlight underline animation */}
                             <motion.span
@@ -70,7 +82,7 @@ const Hero = () => {
                     >
                         <a
                             href="#products"
-                            className="group relative px-8 py-4 bg-white text-industrial-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.2)]"
+                            className="group relative px-8 py-4 bg-white text-industrial-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_10px_rgba(255,255,255,0.1)]"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-electric-blue via-white to-electric-blue opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-[length:200%_auto] animate-[shimmer_2s_linear_infinite]" />
                             <span className="relative flex items-center gap-2">

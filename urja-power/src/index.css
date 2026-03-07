@@ -29,7 +29,10 @@
     @apply hover:bg-white/10 hover:border-electric-blue/50 transition-all duration-300;
   }
   .text-glow {
-    text-shadow: 0 0 20px rgba(27, 209, 255, 0.5);
+    text-shadow: 0 0 20px rgba(27, 209, 255, 0.3);
+  }
+  .video-glow {
+    filter: drop-shadow(0 0 20px rgba(27, 209, 255, 0.4));
   }
   .container-custom {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
