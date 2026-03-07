@@ -4,7 +4,7 @@ import ScrollProgress from '../ui/ScrollProgress';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, hideNavbar = false, hideFooter = false }) => {
     return (
         <div className="relative min-h-screen bg-industrial-900 text-white selection:bg-electric-blue/30 selection:text-white overflow-hidden">
             <CustomCursor />
@@ -19,11 +19,11 @@ const Layout = ({ children }) => {
             </div>
 
             <div className="relative z-10 flex flex-col min-h-screen">
-                <Navbar />
+                {!hideNavbar && <Navbar />}
                 <main className="flex-grow">
                     {children}
                 </main>
-                <Footer />
+                {!hideFooter && <Footer />}
             </div>
         </div>
     );

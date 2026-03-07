@@ -10,7 +10,8 @@ const products = [
         category: "Piping Solutions",
         description: "High-grade unplasticized PVC pipes engineered for maximum durability and chemical resistance in industrial environments.",
         icon: <Factory className="w-8 h-8" />,
-        color: "from-blue-500 to-electric-blue"
+        color: "from-blue-500 to-electric-blue",
+        path: "/products/upvc-pipe"
     },
     {
         id: 2,
@@ -18,7 +19,8 @@ const products = [
         category: "Wiring Protection",
         description: "Heavy-duty electrical pipes designed to safeguard critical wiring infrastructure against physical and environmental damage.",
         icon: <Zap className="w-8 h-8" />,
-        color: "from-purple-500 to-pink-500"
+        color: "from-purple-500 to-pink-500",
+        path: "/products/electrical-pipe"
     },
     {
         id: 3,
@@ -26,7 +28,8 @@ const products = [
         category: "Advanced Fitting",
         description: "Interlocking modular piping solutions offering rapid installation and scalable adaptability for complex layouts.",
         icon: <Hexagon className="w-8 h-8" />,
-        color: "from-emerald-400 to-teal-500"
+        color: "from-emerald-400 to-teal-500",
+        path: "/products/modular-pipe"
     },
     {
         id: 4,
@@ -34,7 +37,8 @@ const products = [
         category: "Accessories",
         description: "Reinforced fan boxes cast to withstand extreme industrial vibrations and ensure secure ceiling fan mounting.",
         icon: <Package className="w-8 h-8" />,
-        color: "from-orange-400 to-red-500"
+        color: "from-orange-400 to-red-500",
+        path: "/products/fan-box"
     },
     {
         id: 5,
@@ -42,9 +46,12 @@ const products = [
         category: "Accessories",
         description: "Flush-mount concealed wiring boxes featuring exact knockout dimensions and robust screw mounts.",
         icon: <Shield className="w-8 h-8" />,
-        color: "from-indigo-400 to-blue-600"
+        color: "from-indigo-400 to-blue-600",
+        path: "/products/concealed-box"
     }
 ];
+
+import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product, index }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -59,50 +66,52 @@ const ProductCard = ({ product, index }) => {
             onMouseLeave={() => setIsHovered(false)}
             className="group relative h-full"
         >
-            {/* Glow effect behind card */}
-            <div
-                className={cn(
-                    "absolute -inset-0.5 rounded-2xl blur-lg transition-opacity duration-500 opacity-0 group-hover:opacity-100 bg-gradient-to-br",
-                    product.color
-                )}
-            />
+            <Link to={product.path} className="block h-full">
+                {/* Glow effect behind card */}
+                <div
+                    className={cn(
+                        "absolute -inset-0.5 rounded-2xl blur-lg transition-opacity duration-500 opacity-0 group-hover:opacity-100 bg-gradient-to-br",
+                        product.color
+                    )}
+                />
 
-            <div className="relative h-full glass rounded-2xl p-8 flex flex-col items-start overflow-hidden bg-industrial-800/90 border border-white/5 group-hover:border-white/20 transition-colors">
+                <div className="relative h-full glass rounded-2xl p-8 flex flex-col items-start overflow-hidden bg-industrial-800/90 border border-white/5 group-hover:border-white/20 transition-colors">
 
-                {/* Animated Background Mesh */}
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                    {product.icon}
+                    {/* Animated Background Mesh */}
+                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        {product.icon}
+                    </div>
+
+                    <div className={cn(
+                        "p-4 rounded-xl mb-6 bg-gradient-to-br transition-transform duration-500 group-hover:scale-110",
+                        product.color
+                    )}>
+                        {React.cloneElement(product.icon, { className: 'w-6 h-6 text-white' })}
+                    </div>
+
+                    <span className="text-xs font-bold uppercase tracking-wider text-electric-blue mb-2 block">
+                        {product.category}
+                    </span>
+
+                    <h4 className="text-2xl font-heading font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-colors">
+                        {product.title}
+                    </h4>
+
+                    <p className="text-gray-400 leading-relaxed mb-8 flex-grow">
+                        {product.description}
+                    </p>
+
+                    <div className="mt-auto pt-4 border-t border-white/10 w-full flex items-center justify-between">
+                        <span className="text-sm text-gray-300 group-hover:text-white transition-colors">View Specifications</span>
+                        <motion.div
+                            animate={{ x: isHovered ? 5 : 0 }}
+                            className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-electric-blue group-hover:bg-electric-blue/10 transition-colors"
+                        >
+                            <Zap className="w-4 h-4 text-electric-blue" />
+                        </motion.div>
+                    </div>
                 </div>
-
-                <div className={cn(
-                    "p-4 rounded-xl mb-6 bg-gradient-to-br transition-transform duration-500 group-hover:scale-110",
-                    product.color
-                )}>
-                    {React.cloneElement(product.icon, { className: 'w-6 h-6 text-white' })}
-                </div>
-
-                <span className="text-xs font-bold uppercase tracking-wider text-electric-blue mb-2 block">
-                    {product.category}
-                </span>
-
-                <h4 className="text-2xl font-heading font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-colors">
-                    {product.title}
-                </h4>
-
-                <p className="text-gray-400 leading-relaxed mb-8 flex-grow">
-                    {product.description}
-                </p>
-
-                <div className="mt-auto pt-4 border-t border-white/10 w-full flex items-center justify-between">
-                    <span className="text-sm text-gray-300 group-hover:text-white transition-colors">View Specifications</span>
-                    <motion.div
-                        animate={{ x: isHovered ? 5 : 0 }}
-                        className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-electric-blue group-hover:bg-electric-blue/10 transition-colors"
-                    >
-                        <Zap className="w-4 h-4 text-electric-blue" />
-                    </motion.div>
-                </div>
-            </div>
+            </Link>
         </motion.div>
     );
 };

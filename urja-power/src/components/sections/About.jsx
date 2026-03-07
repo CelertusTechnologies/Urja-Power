@@ -43,24 +43,18 @@ const About = () => {
 
                         {/* Main Image Card (Glassmorphism) */}
                         <div className="relative glass rounded-2xl p-2 h-[500px] overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.5)]">
-                            {/* Animated Gradient Backdrop acting as a placeholder image for now, later user can add real image */}
-                            <div className="w-full h-full rounded-xl bg-gradient-to-br from-industrial-700 to-industrial-900 flex items-center justify-center relative overflow-hidden">
-                                <div className="absolute inset-0 bg-[url('https://transparenttextures.com/patterns/carbon-fibre.png')] opacity-30 mix-blend-overlay"></div>
+                            <div className="w-full h-full rounded-xl bg-industrial-900 border border-white/5 flex items-center justify-center relative overflow-hidden group-hover:border-electric-blue/30 transition-colors duration-500">
+                                {/* Placed the image that the user provided (Ensure image is in public folder named 'about-image.png' or similar) */}
+                                <img
+                                    src="/about-image.png"
+                                    alt="Industrial Sci-Fi Pipes"
+                                    className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 opacity-90"
+                                />
 
-                                {/* Simulated industrial pipes graphic using CSS shapes */}
-                                <div className="absolute flex gap-4 -rotate-12 translate-y-10">
-                                    <div className="w-16 h-full bg-gradient-to-r from-gray-700 via-gray-400 to-gray-800 rounded-full shadow-2xl relative">
-                                        <div className="absolute top-1/4 w-full h-4 bg-gray-900/50"></div>
-                                    </div>
-                                    <div className="w-24 h-full bg-gradient-to-r from-electric-blue via-blue-400 to-blue-900 rounded-full shadow-2xl relative translate-y-20">
-                                        <div className="absolute top-1/3 w-full h-4 bg-gray-900/50"></div>
-                                    </div>
-                                    <div className="w-12 h-[150%] bg-gradient-to-r from-gray-700 via-gray-400 to-gray-800 rounded-full shadow-2xl relative -translate-y-20">
-                                        <div className="absolute top-1/2 w-full h-4 bg-gray-900/50"></div>
-                                    </div>
-                                </div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-industrial-900 via-transparent to-transparent z-0"></div>
 
-                                <div className="absolute bottom-6 border-l-4 border-electric-blue pl-4 backdrop-blur-md bg-black/40 p-4 rounded-r-lg">
+                                {/* Floating Stat Badge */}
+                                <div className="absolute bottom-6 border-l-4 border-electric-blue pl-4 backdrop-blur-md bg-black/40 p-4 rounded-r-lg z-10 shadow-2xl">
                                     <p className="text-3xl font-heading font-bold text-white mb-1">20+</p>
                                     <p className="text-gray-300 text-sm tracking-wider uppercase">Years Experience</p>
                                 </div>
