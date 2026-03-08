@@ -24,6 +24,11 @@ const ConcealedBox = () => {
             ctaText="Download Specifications / Get Quote"
             colorCode="from-purple-500 to-indigo-600"
             mainImage="/concealed-box.png"
+            galleryImages={[
+                "/Concealed box/Concealed Box1.png",
+                "/Concealed box/Concealed Box2.png",
+                "/Concealed box/Concealed Box3.png",
+            ]}
         />
     );
 };

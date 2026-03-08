@@ -18,7 +18,7 @@ const getIcon = (text) => {
 const ProductDetailTemplate = ({
     title, subtitle, intro,
     features, applications, whyChooseUs, ctaText = "Download Specifications / Get Quote",
-    colorCode, mainImage
+    colorCode, mainImage, galleryImages = []
 }) => {
     return (
         <div className="bg-white min-h-screen text-industrial-900 pt-24 pb-24 font-sans relative overflow-hidden">
@@ -217,7 +217,7 @@ const ProductDetailTemplate = ({
                     </div>
                 </motion.div>
 
-                {/* Additional Gallery Placeholders */}
+                {/* Product Gallery */}
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -225,21 +225,47 @@ const ProductDetailTemplate = ({
                     className="mt-32"
                 >
                     <h2 className="text-3xl font-heading font-bold mb-10 text-center text-industrial-900">Product Gallery</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {[1, 2, 3].map((_, idx) => (
-                            <div key={idx} className={cn(
-                                "rounded-[2rem] overflow-hidden bg-white border border-industrial-100 relative group flex items-center justify-center shadow-sm",
-                                idx === 0 ? "md:col-span-2 aspect-[2/1] md:aspect-auto md:h-96" : "aspect-square md:aspect-auto md:h-96"
-                            )}>
-                                <div className="absolute inset-0 bg-gradient-to-tr from-industrial-100/20 to-transparent"></div>
-                                <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPPHBhdGggZD0iTTAgNDBoNDBNNDAgMHY0MCIgc3Ryb2tlPSIjMGYxNzJhIiBzdHJva2Utb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] opacity-50" />
 
-                                <p className="text-industrial-400 font-medium tracking-widest uppercase text-xs z-10 opacity-50 group-hover:opacity-100 transition-opacity">Image Space</p>
-
-                                <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br ${colorCode}`}></div>
-                            </div>
-                        ))}
-                    </div>
+                    {/* 2-image layout: two equal boxes side by side */}
+                    {galleryImages.length === 2 ? (
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            {galleryImages.map((src, idx) => (
+                                <div key={idx} className="rounded-[2rem] overflow-hidden bg-white border border-industrial-100 relative group flex items-center justify-center shadow-sm md:h-96">
+                                    <img
+                                        src={src}
+                                        alt={`Product image ${idx + 1}`}
+                                        className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                                    />
+                                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br ${colorCode}`}></div>
+                                </div>
+                            ))}
+                        </div>
+                    ) : (
+                        /* 3-image layout: wide first + 2 small */
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {[0, 1, 2].map((idx) => (
+                                <div key={idx} className={cn(
+                                    "rounded-[2rem] overflow-hidden bg-white border border-industrial-100 relative group flex items-center justify-center shadow-sm",
+                                    idx === 0 ? "md:col-span-2 aspect-[2/1] md:aspect-auto md:h-96" : "aspect-square md:aspect-auto md:h-96"
+                                )}>
+                                    {galleryImages[idx] ? (
+                                        <img
+                                            src={galleryImages[idx]}
+                                            alt={`Product image ${idx + 1}`}
+                                            className="absolute inset-0 w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-700"
+                                        />
+                                    ) : (
+                                        <>
+                                            <div className="absolute inset-0 bg-gradient-to-tr from-industrial-100/20 to-transparent"></div>
+                                            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTAgMGg0MHY0MEgweiIgZmlsbD0ibm9uZSIvPPHBhdGggZD0iTTAgNDBoNDBNNDAgMHY0MCIgc3Ryb2tlPSIjMGYxNzJhIiBzdHJva2Utb3BhY2l0eT0iMC4wNSIvPjwvc3ZnPg==')] opacity-50" />
+                                            <p className="text-industrial-400 font-medium tracking-widest uppercase text-xs z-10 opacity-50 group-hover:opacity-100 transition-opacity">Image Space</p>
+                                        </>
+                                    )}
+                                    <div className={`absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500 bg-gradient-to-br ${colorCode}`}></div>
+                                </div>
+                            ))}
+                        </div>
+                    )}
                 </motion.div>
 
                 {/* Contact Section at the Bottom */}

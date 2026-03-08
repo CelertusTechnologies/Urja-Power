@@ -24,6 +24,11 @@ const ElectricalPipe = () => {
             ctaText="Download Specifications / Get Quote"
             colorCode="from-pink-500 to-rose-600"
             mainImage="/electrical-pipe.png"
+            galleryImages={[
+                "/ElectricalPipe/electrical1.png",
+                "/ElectricalPipe/electrical2.png",
+                "/ElectricalPipe/electrical3.png",
+            ]}
         />
     );
 };

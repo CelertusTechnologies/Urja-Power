@@ -24,6 +24,11 @@ const ModularPipe = () => {
             ctaText="Download Specifications / Get Quote"
             colorCode="from-emerald-400 to-teal-600"
             mainImage="/modular-pipe.png"
+            galleryImages={[
+                "/Modularbox/Modularbox1.png",
+                "/Modularbox/Modularbox2.png",
+                "/Modularbox/Modularbox3.png",
+            ]}
         />
     );
 };

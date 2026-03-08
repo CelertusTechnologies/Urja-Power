@@ -24,6 +24,10 @@ const FanBox = () => {
             ctaText="Download Specifications / Get Quote"
             colorCode="from-amber-400 to-orange-600"
             mainImage="/fan-box.png"
+            galleryImages={[
+                "/Fanbox/Fanbox2.png",
+                "/Fanbox/Fanbox3.png",
+            ]}
         />
     );
 };

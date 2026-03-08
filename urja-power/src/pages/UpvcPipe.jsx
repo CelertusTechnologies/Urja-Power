@@ -24,6 +24,11 @@ const UpvcPipe = () => {
             ctaText="Download Specifications / Get Quote"
             colorCode="from-cyan-400 to-blue-600"
             mainImage="/upvc-pipe.png"
+            galleryImages={[
+                "/Upvc pipe/upvc1.png",
+                "/Upvc pipe/upvc2.png",
+                "/Upvc pipe/upvc3.png",
+            ]}
         />
     );
 };
