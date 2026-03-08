@@ -32,10 +32,10 @@ const features = [
 
 const WhyChooseUs = () => {
     return (
-        <section id="why-us" className="py-24 relative bg-industrial-900 border-t border-white/5 overflow-hidden">
+        <section id="why-us" className="py-24 relative bg-industrial-50 border-t border-industrial-100 overflow-hidden">
 
             {/* Background Decor */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-[500px] bg-electric-blue/5 rounded-full blur-[120px] pointer-events-none" />
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-[500px] bg-electric-blue/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute inset-0 bg-[url('https://transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.15] mix-blend-overlay pointer-events-none"></div>
 
             <div className="container-custom relative z-10">
@@ -54,25 +54,25 @@ const WhyChooseUs = () => {
                                 The URJA Advantage
                             </h2>
 
-                            <h3 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
+                            <h3 className="text-4xl md:text-5xl font-heading font-bold text-industrial-900 mb-6 leading-tight">
                                 Why Industry Leaders <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-white">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-600">
                                     Trust Us
                                 </span>
                             </h3>
 
-                            <p className="text-gray-400 font-light leading-relaxed mb-8">
+                            <p className="text-industrial-600 font-light leading-relaxed mb-8">
                                 We don't just supply products; we partner in building reliable, future-proof infrastructure. Our commitment to excellence is engineered into every pipe and fitting we produce.
                             </p>
 
                             <div className="flex gap-4">
-                                <div className="border border-white/10 rounded-xl p-4 glass w-32 text-center">
+                                <div className="border border-industrial-200 rounded-xl p-4 glass w-32 text-center">
                                     <div className="text-3xl font-heading font-bold text-electric-blue mb-1">10k+</div>
-                                    <div className="text-xs text-gray-400 uppercase tracking-wider">Projects</div>
+                                    <div className="text-xs text-industrial-600 uppercase tracking-wider">Projects</div>
                                 </div>
-                                <div className="border border-white/10 rounded-xl p-4 glass w-32 text-center">
+                                <div className="border border-industrial-200 rounded-xl p-4 glass w-32 text-center">
                                     <div className="text-3xl font-heading font-bold text-electric-blue mb-1">0%</div>
-                                    <div className="text-xs text-gray-400 uppercase tracking-wider">Failure Rate</div>
+                                    <div className="text-xs text-industrial-600 uppercase tracking-wider">Failure Rate</div>
                                 </div>
                             </div>
                         </motion.div>
@@ -92,18 +92,18 @@ const WhyChooseUs = () => {
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/0 to-electric-blue/0 group-hover:from-electric-blue/10 group-hover:to-transparent rounded-2xl transition-all duration-500 blur-xl opacity-0 group-hover:opacity-100" />
 
-                                    <div className="relative h-full glass rounded-2xl p-6 border border-white/5 hover:border-electric-blue/30 transition-all duration-300 transform group-hover:-translate-y-1">
-                                        <div className="w-14 h-14 rounded-lg bg-white/5 flex items-center justify-center mb-6 group-hover:bg-electric-blue/10 group-hover:shadow-[0_0_20px_rgba(27,209,255,0.2)] transition-all duration-300">
-                                            <div className="text-gray-400 group-hover:text-electric-blue transition-colors">
+                                    <div className="relative h-full glass rounded-2xl p-6 border border-industrial-200 hover:border-electric-blue/30 transition-all duration-300 transform group-hover:-translate-y-1">
+                                        <div className="w-14 h-14 rounded-lg bg-industrial-100 flex items-center justify-center mb-6 group-hover:bg-electric-blue/10 group-hover:shadow-[0_0_20px_rgba(14,165,233,0.1)] transition-all duration-300">
+                                            <div className="text-industrial-600 group-hover:text-electric-blue transition-colors">
                                                 {feature.icon}
                                             </div>
                                         </div>
 
-                                        <h4 className="text-xl font-heading font-bold text-white mb-3 tracking-wide">
+                                        <h4 className="text-xl font-heading font-bold text-industrial-900 mb-3 tracking-wide">
                                             {feature.title}
                                         </h4>
 
-                                        <p className="text-gray-400 font-light text-sm leading-relaxed">
+                                        <p className="text-industrial-600 font-light text-sm leading-relaxed">
                                             {feature.description}
                                         </p>
                                     </div>

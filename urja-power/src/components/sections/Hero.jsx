@@ -19,8 +19,8 @@ const Hero = () => {
                     <source src="/hero-bg.mp4" type="video/mp4" />
                 </video>
                 {/* Dark overlay for text readability - reduced for video visibility */}
-                <div className="absolute inset-0 bg-black/35" />
-                <div className="absolute inset-0 bg-hero-gradient opacity-40" />
+                <div className="absolute inset-0 bg-black/40" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-industrial-50/50" />
             </div>
 
             {/* Electric Glow Orbs - subtle so video shows through */}
@@ -68,7 +68,7 @@ const Hero = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.4, duration: 0.6 }}
-                        className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl font-light"
+                        className="text-lg md:text-xl text-gray-300 mb-12 max-w-2xl font-light"
                     >
                         Engineered for durability, designed for the future. URJA POWER delivers industry-leading PVC pipes and accessories for complex infrastructure projects.
                     </motion.p>
@@ -82,7 +82,7 @@ const Hero = () => {
                     >
                         <a
                             href="#products"
-                            className="group relative px-8 py-4 bg-white text-industrial-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+                            className="group relative px-8 py-4 bg-white text-industrial-900 font-bold rounded-full overflow-hidden transition-all hover:scale-105 shadow-[0_0_15px_rgba(255,255,255,0.1)]"
                         >
                             <div className="absolute inset-0 bg-gradient-to-r from-electric-blue via-white to-electric-blue opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-[length:200%_auto] animate-[shimmer_2s_linear_infinite]" />
                             <span className="relative flex items-center gap-2">
@@ -93,7 +93,7 @@ const Hero = () => {
 
                         <a
                             href="#contact"
-                            className="px-8 py-4 glass glass-hover text-white font-semibold rounded-full flex items-center justify-center transition-all hover:scale-105"
+                            className="px-8 py-4 glass border-white/20 text-white font-semibold rounded-full flex items-center justify-center transition-all hover:scale-105 hover:bg-white/10"
                         >
                             Get a Quote
                         </a>
@@ -108,7 +108,7 @@ const Hero = () => {
                 transition={{ delay: 1.5, duration: 1 }}
                 className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
             >
-                <span className="text-xs tracking-widest text-gray-400 uppercase">Scroll to explore</span>
+                <span className="text-xs tracking-widest text-gray-300 uppercase">Scroll to explore</span>
                 <motion.div
                     animate={{ y: [0, 10, 0] }}
                     transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}

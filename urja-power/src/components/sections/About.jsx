@@ -23,7 +23,7 @@ const About = () => {
     };
 
     return (
-        <section id="about" className="py-24 relative overflow-hidden bg-industrial-900 border-t border-white/5">
+        <section id="about" className="py-24 relative overflow-hidden bg-white border-t border-industrial-100">
             {/* Background Elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-electric-blue/5 rounded-full blur-[100px] pointer-events-none" />
 
@@ -42,8 +42,8 @@ const About = () => {
                         <div className="absolute -inset-4 border border-electric-blue/20 rounded-2xl transform -rotate-3 scale-105 transition-transform duration-700 group-hover:rotate-0" />
 
                         {/* Main Image Card (Glassmorphism) */}
-                        <div className="relative glass rounded-2xl p-2 h-[500px] overflow-hidden shadow-[0_0_40px_rgba(0,0,0,0.5)]">
-                            <div className="w-full h-full rounded-xl bg-industrial-900 border border-white/5 flex items-center justify-center relative overflow-hidden group-hover:border-electric-blue/30 transition-colors duration-500">
+                        <div className="relative glass rounded-2xl p-2 h-[500px] overflow-hidden shadow-[0_10px_50px_rgba(0,0,0,0.1)]">
+                            <div className="w-full h-full rounded-xl bg-industrial-50 border border-industrial-100 flex items-center justify-center relative overflow-hidden group-hover:border-electric-blue/30 transition-colors duration-500">
                                 {/* Placed the image that the user provided (Ensure image is in public folder named 'about-image.png' or similar) */}
                                 <img
                                     src="/about-image.png"
@@ -51,12 +51,12 @@ const About = () => {
                                     className="absolute inset-0 w-full h-full object-cover scale-105 group-hover:scale-110 transition-transform duration-700 opacity-90"
                                 />
 
-                                <div className="absolute inset-0 bg-gradient-to-t from-industrial-900 via-transparent to-transparent z-0"></div>
+                                <div className="absolute inset-0 bg-gradient-to-t from-industrial-50/80 via-transparent to-transparent z-0"></div>
 
                                 {/* Floating Stat Badge */}
                                 <div className="absolute bottom-6 border-l-4 border-electric-blue pl-4 backdrop-blur-md bg-black/40 p-4 rounded-r-lg z-10 shadow-2xl">
-                                    <p className="text-3xl font-heading font-bold text-white mb-1">20+</p>
-                                    <p className="text-gray-300 text-sm tracking-wider uppercase">Years Experience</p>
+                                    <p className="text-3xl font-heading font-bold text-industrial-900 mb-1">20+</p>
+                                    <p className="text-industrial-600 text-sm tracking-wider uppercase">Years Experience</p>
                                 </div>
                             </div>
                         </div>
@@ -81,15 +81,15 @@ const About = () => {
                             About Our Company
                         </h2>
 
-                        <h3 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6 leading-tight">
+                        <h3 className="text-4xl md:text-5xl font-heading font-bold text-industrial-900 mb-6 leading-tight">
                             Setting the Standard in <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-400">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-600">
                                 Electrical Infrastructure
                             </span>
                         </h3>
 
-                        <p className="text-gray-400 text-lg leading-relaxed mb-8">
-                            At <strong className="text-white">URJA POWER</strong>, we don't just manufacture pipes; we engineer the arteries of modern infrastructure. With a relentless focus on quality and innovation, we provide premium electrical PVC solutions that power progress.
+                        <p className="text-industrial-600 text-lg leading-relaxed mb-8">
+                            At <strong className="text-industrial-900">URJA POWER</strong>, we don't just manufacture pipes; we engineer the arteries of modern infrastructure. With a relentless focus on quality and innovation, we provide premium electrical PVC solutions that power progress.
                         </p>
 
                         <ul className="space-y-4 mb-10">
@@ -105,13 +105,13 @@ const About = () => {
                                     className="flex items-start gap-3"
                                 >
                                     <CheckCircle2 className="w-6 h-6 text-electric-blue shrink-0 mt-0.5" />
-                                    <span className="text-gray-300">{feature}</span>
+                                    <span className="text-industrial-700">{feature}</span>
                                 </motion.li>
                             ))}
                         </ul>
 
                         <motion.div variants={itemVariants}>
-                            <a href="#why-us" className="inline-block relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-electric-blue after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left text-white font-medium tracking-wide">
+                            <a href="#why-us" className="inline-block relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-electric-blue after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left text-industrial-900 font-medium tracking-wide">
                                 Discover Our Capabilities →
                             </a>
                         </motion.div>

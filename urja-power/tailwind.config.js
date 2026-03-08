@@ -8,14 +8,17 @@ export default {
     extend: {
       colors: {
         industrial: {
-          900: '#0a0a0f', // Deep dark background
-          800: '#12121c', // Card backgrounds
-          700: '#1a1a2e', // Elevated surfaces
-          600: '#2b2b40',
+          900: '#0f172a', // Dark slate for text
+          800: '#1e293b', // Muted text
+          700: '#334155', // Subtitles
+          600: '#475569',
+          50: '#f8fafc',  // Ultra light background
+          100: '#f1f5f9', // Light background
+          200: '#e2e8f0', // Card backgrounds
         },
         electric: {
-          blue: '#1bd1ff', // Primary neon/electric blue
-          glow: 'rgba(27, 209, 255, 0.5)',
+          blue: '#0EA5E9', // Adjusted blue for better contrast on white
+          glow: 'rgba(14, 165, 233, 0.2)',
         }
       },
       fontFamily: {
@@ -24,7 +27,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-gradient': 'linear-gradient(to bottom right, #0a0a0f, #12121c, #0a0a0f)',
+        'hero-gradient': 'linear-gradient(to bottom right, #f8fafc, #f1f5f9, #f8fafc)',
       },
       animation: {
         'glow-pulse': 'glow 3s ease-in-out infinite',

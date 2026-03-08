@@ -44,18 +44,18 @@ const Navbar = () => {
             className={cn(
                 'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out',
                 isScrolled
-                    ? 'bg-industrial-900/90 backdrop-blur-lg border-b border-white/10 py-4 shadow-lg shadow-black/50'
+                    ? 'bg-white/90 backdrop-blur-lg border-b border-industrial-200/50 py-4 shadow-sm'
                     : 'bg-transparent py-6'
             )}
         >
             <div className="container-custom flex items-center justify-between">
                 {/* Logo */}
                 <a href="#home" className="flex items-center gap-2 group relative z-50">
-                    <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-white/5 border border-white/10 group-hover:border-electric-blue/50 transition-colors">
+                    <div className="relative flex items-center justify-center w-10 h-10 rounded-lg bg-industrial-100 border border-industrial-200 group-hover:border-electric-blue/50 transition-colors">
                         <Zap className="w-5 h-5 text-electric-blue" />
-                        <div className="absolute inset-0 bg-electric-blue/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+                        <div className="absolute inset-0 bg-electric-blue/10 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
                     </div>
-                    <span className="font-heading font-bold text-xl tracking-wider text-white">
+                    <span className="font-heading font-bold text-xl tracking-wider text-industrial-900">
                         URJA<span className="text-electric-blue">POWER</span>
                     </span>
                 </a>
@@ -67,8 +67,8 @@ const Navbar = () => {
                             key={link.name}
                             href={link.href}
                             className={cn(
-                                "relative text-sm font-medium transition-colors hover:text-white py-2",
-                                activeSection === link.href.substring(1) ? "text-white" : "text-gray-400"
+                                "relative text-sm font-medium transition-colors hover:text-industrial-900 py-2",
+                                activeSection === link.href.substring(1) ? "text-industrial-900" : "text-industrial-600"
                             )}
                         >
                             {link.name}
@@ -84,7 +84,7 @@ const Navbar = () => {
                     ))}
                     <a
                         href="#contact"
-                        className="px-5 py-2.5 rounded-full bg-white/5 border border-white/10 hover:border-electric-blue hover:bg-electric-blue/10 text-sm font-medium transition-all duration-300 shadow-[0_0_0_rgba(27,209,255,0)] hover:shadow-[0_0_15px_rgba(27,209,255,0.3)]"
+                        className="px-5 py-2.5 rounded-full bg-industrial-100 border border-industrial-200 hover:border-electric-blue hover:bg-electric-blue/10 text-sm font-medium text-industrial-900 transition-all duration-300 shadow-sm hover:shadow-[0_4px_10px_rgba(14,165,233,0.15)]"
                     >
                         Get Quote
                     </a>
@@ -92,7 +92,7 @@ const Navbar = () => {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden relative z-50 p-2 text-gray-300 hover:text-white transition-colors"
+                    className="md:hidden relative z-50 p-2 text-industrial-600 hover:text-industrial-900 transition-colors"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -107,7 +107,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.2 }}
-                        className="absolute top-full left-0 right-0 bg-industrial-900 border-b border-white/10 shadow-2xl md:hidden overflow-hidden"
+                        className="absolute top-full left-0 right-0 bg-white border-b border-industrial-100 shadow-xl md:hidden overflow-hidden"
                     >
                         <nav className="flex flex-col py-4 px-6 gap-4">
                             {navLinks.map((link) => (
@@ -115,7 +115,7 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className="text-lg font-medium text-gray-300 hover:text-electric-blue transition-colors py-2 border-b border-white/5"
+                                    className="text-lg font-medium text-industrial-600 hover:text-electric-blue transition-colors py-2 border-b border-industrial-50"
                                 >
                                     {link.name}
                                 </a>

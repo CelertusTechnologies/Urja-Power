@@ -75,7 +75,7 @@ const ProductCard = ({ product, index }) => {
                     )}
                 />
 
-                <div className="relative h-full glass rounded-2xl p-8 flex flex-col items-start overflow-hidden bg-industrial-800/90 border border-white/5 group-hover:border-white/20 transition-colors">
+                <div className="relative h-full glass rounded-2xl p-8 flex flex-col items-start overflow-hidden bg-white/90 border border-industrial-100 group-hover:border-electric-blue/30 transition-colors">
 
                     {/* Animated Background Mesh */}
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
@@ -93,19 +93,19 @@ const ProductCard = ({ product, index }) => {
                         {product.category}
                     </span>
 
-                    <h4 className="text-2xl font-heading font-bold text-white mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-400 transition-colors">
+                    <h4 className="text-2xl font-heading font-bold text-industrial-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-industrial-900 group-hover:to-industrial-600 transition-colors">
                         {product.title}
                     </h4>
 
-                    <p className="text-gray-400 leading-relaxed mb-8 flex-grow">
+                    <p className="text-industrial-600 leading-relaxed mb-8 flex-grow">
                         {product.description}
                     </p>
 
-                    <div className="mt-auto pt-4 border-t border-white/10 w-full flex items-center justify-between">
-                        <span className="text-sm text-gray-300 group-hover:text-white transition-colors">View Specifications</span>
+                    <div className="mt-auto pt-4 border-t border-industrial-100 w-full flex items-center justify-between">
+                        <span className="text-sm text-industrial-600 group-hover:text-industrial-900 transition-colors">View Specifications</span>
                         <motion.div
                             animate={{ x: isHovered ? 5 : 0 }}
-                            className="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center group-hover:border-electric-blue group-hover:bg-electric-blue/10 transition-colors"
+                            className="w-8 h-8 rounded-full border border-industrial-200 flex items-center justify-center group-hover:border-electric-blue group-hover:bg-electric-blue/10 transition-colors"
                         >
                             <Zap className="w-4 h-4 text-electric-blue" />
                         </motion.div>
@@ -118,7 +118,7 @@ const ProductCard = ({ product, index }) => {
 
 const Products = () => {
     return (
-        <section id="products" className="py-24 relative bg-industrial-900">
+        <section id="products" className="py-24 relative bg-white">
             <div className="container-custom">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
@@ -136,16 +136,16 @@ const Products = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-6xl font-heading font-bold text-white mb-6"
+                        className="text-4xl md:text-6xl font-heading font-bold text-industrial-900 mb-6"
                     >
-                        Engineered For <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-400">Excellence</span>
+                        Engineered For <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-600">Excellence</span>
                     </motion.h2>
 
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-lg text-gray-400 font-light"
+                        className="text-lg text-industrial-600 font-light"
                     >
                         Explore our comprehensive range of high-performance PVC piping and electrical accessories, built to exceed industry standards and withstand the toughest conditions.
                     </motion.p>
