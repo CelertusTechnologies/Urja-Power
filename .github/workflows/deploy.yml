@@ -35,7 +35,7 @@ jobs:
           timeout: 60s
           command_timeout: 2m
           script: |
-            rm -rf /var/www/Big-Spoon-pvt-ltd/dist
+            rm -rf /var/www/Urja-Power/dist
             echo "Dist folder cleaned successfully"
 
       - name: Deploy dist folder to VPS
