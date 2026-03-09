@@ -8,7 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
 
     steps:
       - name: Checkout code
@@ -25,26 +24,15 @@ jobs:
       - name: Build React app
         run: npm run build
 
-      - name: Clean remote build folder
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          script: |
-            rm -rf /var/www/Urja-Power/build
-            echo "Build folder cleaned"
-
-      - name: Deploy build folder to VPS
+      - name: Deploy build to VPS
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_KEY }}
           port: 22
-          source: "build"
-          target: "/var/www/Urja-Power"
+          source: "dist"
+          target: "/var/www/Urja-Power/"
 
       - name: Reload Nginx
         uses: appleboy/ssh-action@v0.1.10
@@ -55,4 +43,3 @@ jobs:
           port: 22
           script: |
             sudo systemctl reload nginx
-            echo "Nginx reloaded"
