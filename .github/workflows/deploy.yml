@@ -8,7 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
 
     steps:
       - name: Checkout code
@@ -24,17 +23,6 @@ jobs:
 
       - name: Build React app
         run: npm run build
-
-      - name: Clean remote dist folder
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: 22
-          script: |
-            rm -rf /var/www/Urja-Power/dist
-            echo "Dist folder cleaned successfully"
 
       - name: Deploy dist folder to VPS
         uses: appleboy/scp-action@v0.1.7
@@ -55,4 +43,3 @@ jobs:
           port: 22
           script: |
             sudo systemctl reload nginx
-            echo "Nginx reloaded successfully"
