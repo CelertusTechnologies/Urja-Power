@@ -4,9 +4,9 @@ import ProductDetailTemplate from '../components/layout/ProductDetailTemplate';
 const ElectricalPipe = () => {
     return (
         <ProductDetailTemplate
-            title="Electrical Conduit Systems"
+            title="Electrical Conduit Pipes"
             subtitle="Wiring Protection"
-            intro="Heavy-duty conduit pipes designed to protect electrical wiring from damage and environmental impact."
+            intro="Heavy-duty electrical conduit pipes designed to protect electrical wiring from damage and environmental impact."
             features={[
                 "Fire resistant",
                 "High impact strength",

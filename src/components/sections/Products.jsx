@@ -15,29 +15,29 @@ const products = [
     },
     {
         id: 2,
-        title: "Electrical Conduit",
+        title: "Electrical Conduit Pipes",
         category: "Wiring Protection",
-        description: "Heavy-duty electrical pipes designed to safeguard critical wiring infrastructure against physical and environmental damage.",
+        description: "Heavy-duty electrical conduit pipes designed to safeguard critical wiring infrastructure against physical and environmental damage.",
         icon: <Zap className="w-8 h-8" />,
-        color: "from-purple-500 to-pink-500",
+        color: "from-[#22c55e] to-[#16a34a]",
         path: "/products/electrical-pipe"
     },
     {
         id: 3,
-        title: "Modular Pipe System",
-        category: "Advanced Fitting",
-        description: "Interlocking modular piping solutions offering rapid installation and scalable adaptability for complex layouts.",
+        title: "Modular Boxes",
+        category: "Modular Accessories",
+        description: "Versatile modular boxes offering rapid installation and scalable adaptability for complex electrical layouts.",
         icon: <Hexagon className="w-8 h-8" />,
-        color: "from-emerald-400 to-teal-500",
+        color: "from-[#eab308] to-[#ca8a04]",
         path: "/products/modular-pipe"
     },
     {
         id: 4,
-        title: "Industrial Fan Box",
+        title: "Fan Box",
         category: "Accessories",
         description: "Reinforced fan boxes cast to withstand extreme industrial vibrations and ensure secure ceiling fan mounting.",
         icon: <Package className="w-8 h-8" />,
-        color: "from-orange-400 to-red-500",
+        color: "from-[#22c55e] to-[#15803d]",
         path: "/products/fan-box"
     },
     {
