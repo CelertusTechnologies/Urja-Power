@@ -4,9 +4,9 @@ import ProductDetailTemplate from '../components/layout/ProductDetailTemplate';
 const ModularPipe = () => {
     return (
         <ProductDetailTemplate
-            title="Advanced Modular Pipe Systems"
-            subtitle="Flexible Infrastructure"
-            intro="Interlocking modular piping solutions built for fast installation and scalable infrastructure."
+            title="Modular Boxes"
+            subtitle="Modular Accessories"
+            intro="Versatile modular boxes designed for fast installation and scalable electrical infrastructure."
             features={[
                 "Quick installation",
                 "Flexible design",

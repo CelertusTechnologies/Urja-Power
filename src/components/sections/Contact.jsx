@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send, CheckCircle, XCircle } from 'lucide-react';
 import { cn } from '../../utils/utils';
+import logo from '../../assets/Logo.png';
 
 const SHEETY_URL =
   'https://api.sheety.co/f87695357a26c709f44cd4ecdaa2e07a/pvcWebsiteQueriEs/sheet1';
@@ -16,7 +17,7 @@ const InputField = ({ id, label, type = 'text', value, onChange, ...props }) => 
         type={type}
         value={value}
         className={cn(
-          'w-full bg-transparent border-0 border-b-2 border-industrial-200 px-0 py-3 text-industrial-900 focus:ring-0 focus:outline-none focus:border-electric-blue transition-colors rounded-none peer'
+          'w-full bg-transparent border-0 border-b-2 border-industrial-200 px-0 py-3 text-industrial-900 focus:ring-0 focus:outline-none focus:border-[#22c55e] transition-colors rounded-none peer'
         )}
         onFocus={() => setIsFocused(true)}
         onBlur={() => setIsFocused(false)}
@@ -28,7 +29,7 @@ const InputField = ({ id, label, type = 'text', value, onChange, ...props }) => 
         className={cn(
           'absolute left-0 top-3 text-industrial-500 transition-all duration-300 pointer-events-none origin-[0]',
           isFocused || value
-            ? 'transform -translate-y-7 scale-75 text-electric-blue'
+            ? 'transform -translate-y-7 scale-75 text-[#22c55e]'
             : 'transform translate-y-3 scale-100'
         )}
       >
@@ -36,7 +37,7 @@ const InputField = ({ id, label, type = 'text', value, onChange, ...props }) => 
       </label>
       <div
         className={cn(
-          'absolute bottom-0 left-0 h-[2px] bg-electric-blue transition-all duration-500 ease-out',
+          'absolute bottom-0 left-0 h-[2px] bg-[#22c55e] transition-all duration-500 ease-out',
           isFocused ? 'w-full opacity-100' : 'w-0 opacity-0'
         )}
       />
@@ -113,7 +114,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-heading font-bold text-industrial-900 mb-4"
           >
-            Partner with <span className="text-electric-blue">Power</span>
+            Partner with <span className="text-[#22c55e]">Power</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -129,19 +130,29 @@ const Contact = () => {
         <div className="grid lg:grid-cols-5 gap-12 glass rounded-3xl overflow-hidden border border-industrial-100 shadow-xl p-2">
 
           {/* Contact Information (Left Side / Top on Mobile) */}
-          <div className="lg:col-span-2 bg-industrial-50 rounded-2xl p-10 relative overflow-hidden group border border-industrial-100">
-            <div className="absolute inset-0 bg-gradient-to-b from-white/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
+          <div className="lg:col-span-2 rounded-2xl p-10 relative overflow-hidden group border border-[#22c55e]/20" style={{ background: 'linear-gradient(135deg, #052e16 0%, #14532d 60%, #1a3a0a 100%)' }}>
+            <div className="absolute inset-0 bg-gradient-to-b from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none" />
 
-            <h3 className="text-2xl font-heading font-bold text-industrial-900 mb-8">Contact Information</h3>
+            {/* Logo in Contact Section */}
+            <div className="flex justify-center mb-8">
+              <img
+                src={logo}
+                alt="URJA POWER"
+                className="h-20 w-auto object-contain"
+                style={{ filter: 'brightness(1.1) saturate(1.2)' }}
+              />
+            </div>
+
+            <h3 className="text-2xl font-heading font-bold text-white mb-8">Contact Information</h3>
 
             <div className="space-y-8">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-white border border-industrial-200 flex items-center justify-center shrink-0 shadow-sm">
-                  <MapPin className="w-5 h-5 text-electric-blue" />
+                <div className="w-10 h-10 rounded-full bg-[#22c55e]/20 border border-[#22c55e]/40 flex items-center justify-center shrink-0 shadow-sm">
+                  <MapPin className="w-5 h-5 text-[#4ade80]" />
                 </div>
                 <div>
-                  <h4 className="text-industrial-900 font-medium mb-1">Headquarters</h4>
-                  <p className="text-industrial-600 text-sm leading-relaxed">
+                  <h4 className="text-white font-medium mb-1">Headquarters</h4>
+                  <p className="text-green-200 text-sm leading-relaxed">
                     Plot No. 42, Industrial Area Phase II<br />
                     New Delhi, India 110020
                   </p>
@@ -149,27 +160,27 @@ const Contact = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-white border border-industrial-200 flex items-center justify-center shrink-0 shadow-sm">
-                  <Phone className="w-5 h-5 text-electric-blue" />
+                <div className="w-10 h-10 rounded-full bg-[#22c55e]/20 border border-[#22c55e]/40 flex items-center justify-center shrink-0 shadow-sm">
+                  <Phone className="w-5 h-5 text-[#4ade80]" />
                 </div>
                 <div>
-                  <h4 className="text-industrial-900 font-medium mb-1">Phone Inquiry</h4>
-                  <p className="text-industrial-600 text-sm">+91 1800 123 4567<br />+91 98765 43210</p>
+                  <h4 className="text-white font-medium mb-1">Phone Inquiry</h4>
+                  <p className="text-green-200 text-sm">+91 1800 123 4567<br />+91 98765 43210</p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-full bg-white border border-industrial-200 flex items-center justify-center shrink-0 shadow-sm">
-                  <Mail className="w-5 h-5 text-electric-blue" />
+                <div className="w-10 h-10 rounded-full bg-[#22c55e]/20 border border-[#22c55e]/40 flex items-center justify-center shrink-0 shadow-sm">
+                  <Mail className="w-5 h-5 text-[#4ade80]" />
                 </div>
                 <div>
-                  <h4 className="text-industrial-900 font-medium mb-1">Email Us</h4>
-                  <p className="text-industrial-600 text-sm">sales@urjapower.com<br />support@urjapower.com</p>
+                  <h4 className="text-white font-medium mb-1">Email Us</h4>
+                  <p className="text-green-200 text-sm">sales@urjapower.com<br />support@urjapower.com</p>
                 </div>
               </div>
             </div>
 
-            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-electric-blue/10 rounded-full blur-[50px] pointer-events-none" />
+            <div className="absolute -bottom-24 -right-24 w-48 h-48 bg-[#eab308]/10 rounded-full blur-[50px] pointer-events-none" />
           </div>
 
           {/* Contact Form (Right Side) */}
@@ -267,11 +278,11 @@ const Contact = () => {
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="group relative px-8 py-4 bg-white text-industrial-900 border border-industrial-200 font-bold rounded-lg overflow-hidden transition-all hover:border-electric-blue hover:shadow-[0_8px_30px_rgba(15,23,42,0.1)] w-full sm:w-auto self-start shadow-sm disabled:opacity-60 disabled:cursor-not-allowed"
+                className="group relative px-8 py-4 bg-[#22c55e] text-white border border-[#16a34a] font-bold rounded-lg overflow-hidden transition-all hover:bg-[#16a34a] hover:shadow-[0_8px_30px_rgba(34,197,94,0.3)] w-full sm:w-auto self-start shadow-sm disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 <span className="relative flex items-center justify-center gap-2 transition-colors">
                   {status === 'loading' ? 'Sending…' : 'Send Inquiry'}
-                  <Send className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300 text-electric-blue" />
+                  <Send className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform duration-300 text-white" />
                 </span>
               </button>
             </form>

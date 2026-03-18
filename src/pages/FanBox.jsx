@@ -4,7 +4,7 @@ import ProductDetailTemplate from '../components/layout/ProductDetailTemplate';
 const FanBox = () => {
     return (
         <ProductDetailTemplate
-            title="Industrial Fan Boxes"
+            title="Fan Box"
             subtitle="Heavy Duty Accessories"
             intro="Reinforced fan boxes designed to withstand heavy vibration and ensure secure ceiling mounting."
             features={[

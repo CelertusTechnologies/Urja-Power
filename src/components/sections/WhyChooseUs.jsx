@@ -49,14 +49,14 @@ const WhyChooseUs = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
                         >
-                            <h2 className="text-sm tracking-widest text-electric-blue font-semibold uppercase mb-3 flex items-center gap-4">
-                                <span className="w-12 h-px bg-electric-blue"></span>
+                            <h2 className="text-sm tracking-widest text-[#22c55e] font-semibold uppercase mb-3 flex items-center gap-4">
+                                <span className="w-12 h-px bg-[#22c55e]"></span>
                                 The URJA Advantage
                             </h2>
 
                             <h3 className="text-4xl md:text-5xl font-heading font-bold text-industrial-900 mb-6 leading-tight">
                                 Why Industry Leaders <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-600">
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] to-[#eab308]">
                                     Trust Us
                                 </span>
                             </h3>
@@ -67,11 +67,11 @@ const WhyChooseUs = () => {
 
                             <div className="flex gap-4">
                                 <div className="border border-industrial-200 rounded-xl p-4 glass w-32 text-center">
-                                    <div className="text-3xl font-heading font-bold text-electric-blue mb-1">10k+</div>
+                                    <div className="text-3xl font-heading font-bold text-[#22c55e] mb-1">10k+</div>
                                     <div className="text-xs text-industrial-600 uppercase tracking-wider">Projects</div>
                                 </div>
                                 <div className="border border-industrial-200 rounded-xl p-4 glass w-32 text-center">
-                                    <div className="text-3xl font-heading font-bold text-electric-blue mb-1">0%</div>
+                                    <div className="text-3xl font-heading font-bold text-[#22c55e] mb-1">0%</div>
                                     <div className="text-xs text-industrial-600 uppercase tracking-wider">Failure Rate</div>
                                 </div>
                             </div>
@@ -90,11 +90,11 @@ const WhyChooseUs = () => {
                                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                                     className="group relative"
                                 >
-                                    <div className="absolute inset-0 bg-gradient-to-br from-electric-blue/0 to-electric-blue/0 group-hover:from-electric-blue/10 group-hover:to-transparent rounded-2xl transition-all duration-500 blur-xl opacity-0 group-hover:opacity-100" />
+                                    <div className="absolute -inset-0.5 bg-gradient-to-br from-[#22c55e]/0 to-[#22c55e]/0 group-hover:from-[#22c55e]/10 group-hover:to-transparent rounded-2xl transition-all duration-500 blur-xl opacity-0 group-hover:opacity-100" />
 
-                                    <div className="relative h-full glass rounded-2xl p-6 border border-industrial-200 hover:border-electric-blue/30 transition-all duration-300 transform group-hover:-translate-y-1">
-                                        <div className="w-14 h-14 rounded-lg bg-industrial-100 flex items-center justify-center mb-6 group-hover:bg-electric-blue/10 group-hover:shadow-[0_0_20px_rgba(14,165,233,0.1)] transition-all duration-300">
-                                            <div className="text-industrial-600 group-hover:text-electric-blue transition-colors">
+                                    <div className="relative h-full glass rounded-2xl p-6 border border-industrial-200 hover:border-[#22c55e]/30 transition-all duration-300 transform group-hover:-translate-y-1">
+                                        <div className="w-14 h-14 rounded-lg bg-industrial-100 flex items-center justify-center mb-6 group-hover:bg-[#22c55e]/10 group-hover:shadow-[0_0_20px_rgba(34,197,94,0.1)] transition-all duration-300">
+                                            <div className="text-industrial-600 group-hover:text-[#22c55e] transition-colors">
                                                 {feature.icon}
                                             </div>
                                         </div>
