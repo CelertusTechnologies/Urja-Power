@@ -54,7 +54,7 @@ const About = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-industrial-50/80 via-transparent to-transparent z-0"></div>
 
                                 {/* Floating Stat Badge */}
-                                <div className="absolute bottom-6 border-l-4 border-electric-blue pl-4 backdrop-blur-md bg-black/40 p-4 rounded-r-lg z-10 shadow-2xl">
+                                <div className="absolute bottom-6 border-l-4 border-[#22c55e] pl-4 backdrop-blur-md bg-black/40 p-4 rounded-r-lg z-10 shadow-2xl">
                                     <p className="text-3xl font-heading font-bold text-industrial-900 mb-1">20+</p>
                                     <p className="text-industrial-600 text-sm tracking-wider uppercase">Years Experience</p>
                                 </div>
@@ -68,7 +68,7 @@ const About = () => {
                             className="absolute -right-8 top-12 glass p-4 rounded-xl shadow-2xl border-electric-blue/30 lg:block hidden"
                         >
                             <div className="flex items-center gap-3">
-                                <div className="w-3 h-3 rounded-full bg-electric-blue animate-ping" />
+                                <div className="w-3 h-3 rounded-full bg-[#22c55e] animate-ping" />
                                 <span className="font-semibold text-sm tracking-wide">ISO 9001:2015</span>
                             </div>
                         </motion.div>
@@ -76,14 +76,14 @@ const About = () => {
 
                     {/* Right Column - Text Content */}
                     <motion.div variants={itemVariants} className="flex flex-col">
-                        <h2 className="text-sm tracking-widest text-electric-blue font-semibold uppercase mb-3 flex items-center gap-4">
-                            <span className="w-12 h-px bg-electric-blue"></span>
+                        <h2 className="text-sm tracking-widest text-[#22c55e] font-semibold uppercase mb-3 flex items-center gap-4">
+                            <span className="w-12 h-px bg-[#22c55e]"></span>
                             About Our Company
                         </h2>
 
                         <h3 className="text-4xl md:text-5xl font-heading font-bold text-industrial-900 mb-6 leading-tight">
                             Setting the Standard in <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-electric-blue to-purple-600">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#22c55e] to-[#eab308]">
                                 Electrical Infrastructure
                             </span>
                         </h3>
@@ -104,14 +104,14 @@ const About = () => {
                                     variants={itemVariants}
                                     className="flex items-start gap-3"
                                 >
-                                    <CheckCircle2 className="w-6 h-6 text-electric-blue shrink-0 mt-0.5" />
+                                    <CheckCircle2 className="w-6 h-6 text-[#22c55e] shrink-0 mt-0.5" />
                                     <span className="text-industrial-700">{feature}</span>
                                 </motion.li>
                             ))}
                         </ul>
 
                         <motion.div variants={itemVariants}>
-                            <a href="#why-us" className="inline-block relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-electric-blue after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left text-industrial-900 font-medium tracking-wide">
+                            <a href="#why-us" className="inline-block relative after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-full after:h-0.5 after:bg-[#22c55e] after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:origin-left text-industrial-900 font-medium tracking-wide">
                                 Discover Our Capabilities →
                             </a>
                         </motion.div>

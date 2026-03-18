@@ -17,8 +17,14 @@ export default {
           200: '#e2e8f0', // Card backgrounds
         },
         electric: {
-          blue: '#0EA5E9', // Adjusted blue for better contrast on white
-          glow: 'rgba(14, 165, 233, 0.2)',
+          blue: '#22c55e', // Brand green (logo color)
+          glow: 'rgba(34, 197, 94, 0.2)',
+        },
+        brand: {
+          green: '#22c55e',
+          'green-dark': '#16a34a',
+          yellow: '#eab308',
+          'yellow-dark': '#ca8a04',
         }
       },
       fontFamily: {

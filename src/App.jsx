@@ -13,8 +13,19 @@ const ConcealedBox = lazy(() => import('./pages/ConcealedBox'));
 function ScrollToTop() {
   const { pathname, hash } = useLocation();
 
+  // On very first render (page load / refresh), wipe any stale hash so we
+  // always land at the top of the page instead of a mid-page section.
   useEffect(() => {
-    // If there is a #hash in the URL (like #products), scroll to it
+    if (window.location.hash) {
+      // Remove the hash from the URL without adding a history entry
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+    window.scrollTo({ top: 0, behavior: 'instant' });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // On subsequent in-app navigations, respect the hash for smooth scrolling
+  useEffect(() => {
     if (hash) {
       setTimeout(() => {
         const id = hash.replace('#', '');
@@ -22,9 +33,8 @@ function ScrollToTop() {
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
         }
-      }, 100); // slight delay to ensure DOM is ready
+      }, 100);
     } else {
-      // Otherwise scroll to the absolute top of the page
       window.scrollTo(0, 0);
     }
   }, [pathname, hash]);
