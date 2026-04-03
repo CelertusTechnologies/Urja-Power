@@ -82,7 +82,7 @@ const Footer = () => {
                     <div>
                         <h4 className="text-industrial-900 font-semibold mb-6">Our Products</h4>
                         <ul className="space-y-4">
-                            {['UPVC Pipes', 'Electrical Conduits', 'Modular Piping', 'Concealed Boxes', 'Industrial Fan Boxes'].map((link, idx) => (
+                            {['UPVC Pipes', 'Electrical Conduit Pipe', 'Modular Box', 'Concealed Boxes', 'Fan Boxes'].map((link, idx) => (
                                 <li key={idx}>
                                     <a href="#" className="text-industrial-600 text-sm hover:text-[#22c55e] transition-colors flex items-center gap-2 group">
                                         <span className="w-1 h-1 bg-industrial-300 rounded-full group-hover:bg-[#22c55e] transition-colors" />
@@ -104,15 +104,6 @@ const Footer = () => {
                                 <div>
                                     <h5 className="text-sm text-industrial-900 font-medium">ISO 9001:2015</h5>
                                     <p className="text-xs text-industrial-500">Certified Company</p>
-                                </div>
-                            </div>
-                            <div className="glass p-4 rounded-lg border-industrial-200 flex items-center gap-3">
-                                <div className="w-8 h-8 bg-industrial-100 rounded flex items-center justify-center shrink-0">
-                                    <span className="text-xs font-bold text-[#22c55e]">ISI</span>
-                                </div>
-                                <div>
-                                    <h5 className="text-sm text-industrial-900 font-medium">ISI Marked</h5>
-                                    <p className="text-xs text-industrial-500">Standard Certified</p>
                                 </div>
                             </div>
                         </div>

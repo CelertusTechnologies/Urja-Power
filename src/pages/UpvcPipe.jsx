@@ -11,14 +11,13 @@ const UpvcPipe = () => {
                 "High chemical resistance",
                 "Corrosion-free material",
                 "Lightweight & easy installation",
-                "Long service life",
-                "Leak-proof performance"
+                "Long service life"
             ]}
             applications={[
-                "Industrial piping systems",
-                "Water supply systems",
-                "Agricultural irrigation",
-                "Chemical plants"
+                "Industrial electrical",
+                "Building & Construction",
+                "Commercial Wiring",
+                "Infrastructure Projects"
             ]}
             whyChooseUs="Our UPVC pipes are engineered to meet strict industry standards and ensure long-term reliability."
             ctaText="Download Specifications / Get Quote"

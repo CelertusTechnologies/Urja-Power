@@ -51,7 +51,7 @@ const WhyChooseUs = () => {
                         >
                             <h2 className="text-sm tracking-widest text-[#22c55e] font-semibold uppercase mb-3 flex items-center gap-4">
                                 <span className="w-12 h-px bg-[#22c55e]"></span>
-                                The URJA Advantage
+                                The URJA POWER Advantage
                             </h2>
 
                             <h3 className="text-4xl md:text-5xl font-heading font-bold text-industrial-900 mb-6 leading-tight">
@@ -67,7 +67,7 @@ const WhyChooseUs = () => {
 
                             <div className="flex gap-4">
                                 <div className="border border-industrial-200 rounded-xl p-4 glass w-32 text-center">
-                                    <div className="text-3xl font-heading font-bold text-[#22c55e] mb-1">10k+</div>
+                                    <div className="text-3xl font-heading font-bold text-[#22c55e] mb-1">5k+</div>
                                     <div className="text-xs text-industrial-600 uppercase tracking-wider">Projects</div>
                                 </div>
                                 <div className="border border-industrial-200 rounded-xl p-4 glass w-32 text-center">
