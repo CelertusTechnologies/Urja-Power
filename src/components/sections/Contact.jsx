@@ -114,7 +114,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="text-4xl md:text-5xl font-heading font-bold text-industrial-900 mb-4"
           >
-            Partner with <span className="text-[#22c55e]">Power</span>
+            Partner with <span className="text-[#22c55e]">Urja Power</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -175,7 +175,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="text-white font-medium mb-1">Email Us</h4>
-                  <p className="text-green-200 text-sm">sales@urjapower.com<br />support@urjapower.com</p>
+                  <p className="text-green-200 text-sm">Support@urjapower.in<br />Shivurjapowerprivatelimited@gmail.com</p>
                 </div>
               </div>
             </div>

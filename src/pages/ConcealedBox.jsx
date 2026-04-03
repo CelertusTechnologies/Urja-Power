@@ -4,12 +4,11 @@ import ProductDetailTemplate from '../components/layout/ProductDetailTemplate';
 const ConcealedBox = () => {
     return (
         <ProductDetailTemplate
-            title="Concealed Wiring Boxes"
+            title="Concealed Boxes"
             subtitle="Premium Flush Mounts"
             intro="Flush-mount concealed boxes designed for modern electrical installations and safety."
             features={[
                 "Perfect knockout dimensions",
-                "Heat resistant material",
                 "Strong screw mounting",
                 "Neat wiring management",
                 "Long life durability"
