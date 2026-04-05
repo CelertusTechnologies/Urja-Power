@@ -26,7 +26,6 @@ const UpvcPipe = () => {
             galleryImages={[
                 "/Upvc pipe/upvc1.png",
                 "/Upvc pipe/upvc2.png",
-                "/Upvc pipe/upvc3.png",
             ]}
         />
     );

@@ -55,7 +55,7 @@ const About = () => {
 
                                 {/* Floating Stat Badge */}
                                 <div className="absolute bottom-6 border-l-4 border-[#22c55e] pl-4 backdrop-blur-md bg-black/40 p-4 rounded-r-lg z-10 shadow-2xl">
-                                    <p className="text-3xl font-heading font-bold text-industrial-900 mb-1">10+</p>
+                                    <p className="text-3xl font-heading font-bold text-industrial-900 mb-1">5+</p>
                                     <p className="text-industrial-600 text-sm tracking-wider uppercase">Years Experience</p>
                                 </div>
                             </div>
