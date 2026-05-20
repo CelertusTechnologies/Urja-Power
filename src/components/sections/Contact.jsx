@@ -153,8 +153,7 @@ const Contact = () => {
                 <div>
                   <h4 className="text-white font-medium mb-1">Headquarters</h4>
                   <p className="text-green-200 text-sm leading-relaxed">
-                    Plot No. 42, Industrial Area Phase II<br />
-                    New Delhi, India 110020
+                    Ward No. 03, Near Old Anaj Mandi,<br />Gohana - 131301, Dist. Sonipat, Haryana, INDIA
                   </p>
                 </div>
               </div>
