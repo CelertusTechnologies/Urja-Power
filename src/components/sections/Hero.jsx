@@ -4,9 +4,9 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const Hero = () => {
     return (
-        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
+        <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16 bg-industrial-900">
             {/* Video Background */}
-            <div className="absolute inset-0 z-0">
+            <div className="absolute inset-0 z-0 bg-industrial-900">
                 <video
                     autoPlay
                     loop

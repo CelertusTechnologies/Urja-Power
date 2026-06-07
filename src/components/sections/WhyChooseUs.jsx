@@ -32,7 +32,7 @@ const features = [
 
 const WhyChooseUs = () => {
     return (
-        <section id="why-us" className="py-24 relative bg-industrial-50 border-t border-industrial-100 overflow-hidden">
+        <section id="why-us" className="py-16 md:py-20 relative bg-industrial-50 border-t border-industrial-100 overflow-hidden">
 
             {/* Background Decor */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-[500px] bg-electric-blue/10 rounded-full blur-[120px] pointer-events-none" />

@@ -85,7 +85,7 @@ const ProductDetailTemplate = ({
                     >
                         <div className={`absolute inset-0 bg-gradient-to-tr ${colorCode} opacity-10 group-hover:opacity-20 transition-opacity duration-700 z-10 pointer-events-none`}></div>
 
-                        <div className="w-full h-[600px] bg-industrial-50 border border-industrial-100 flex flex-col items-center justify-center relative overflow-hidden group-hover:border-industrial-200 transition-colors duration-500">
+                        <div className="w-full h-[300px] sm:h-[450px] lg:h-[600px] bg-industrial-50 border border-industrial-100 flex flex-col items-center justify-center relative overflow-hidden group-hover:border-industrial-200 transition-colors duration-500">
                             {mainImage ? (
                                 <img
                                     src={mainImage}
@@ -128,7 +128,7 @@ const ProductDetailTemplate = ({
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
-                        className="lg:col-span-7 bg-white border border-industrial-100 rounded-[2rem] p-10 lg:p-14 shadow-sm"
+                        className="lg:col-span-7 bg-white border border-industrial-100 rounded-[2rem] p-6 sm:p-10 lg:p-14 shadow-sm"
                     >
                         <h2 className="text-3xl font-heading font-bold mb-10 flex items-center gap-4 text-industrial-900">
                             <span className={`w-12 h-1 rounded-full bg-gradient-to-r ${colorCode}`}></span>
@@ -163,7 +163,7 @@ const ProductDetailTemplate = ({
                         className="lg:col-span-5 relative group"
                     >
                         <div className={`absolute inset-0 bg-gradient-to-br ${colorCode} rounded-[2rem] blur-xl opacity-20 group-hover:opacity-30 transition-opacity duration-500`}></div>
-                        <div className="relative h-full bg-white border border-industrial-100 rounded-[2rem] p-10 lg:p-14 overflow-hidden flex flex-col justify-center shadow-sm">
+                        <div className="relative h-full bg-white border border-industrial-100 rounded-[2rem] p-6 sm:p-10 lg:p-14 overflow-hidden flex flex-col justify-center shadow-sm">
 
                             <div className="absolute top-0 right-0 p-8 opacity-5">
                                 <ShieldCheck className="w-32 h-32 text-industrial-900" />
@@ -230,7 +230,7 @@ const ProductDetailTemplate = ({
                     {galleryImages.length === 2 ? (
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {galleryImages.map((src, idx) => (
-                                <div key={idx} className="rounded-[2rem] overflow-hidden bg-white border border-industrial-100 relative group flex items-center justify-center shadow-sm md:h-96">
+                                <div key={idx} className="rounded-[2rem] overflow-hidden bg-white border border-industrial-100 relative group flex items-center justify-center shadow-sm h-64 sm:h-80 md:h-96">
                                     <img
                                         src={src}
                                         alt={`Product image ${idx + 1}`}

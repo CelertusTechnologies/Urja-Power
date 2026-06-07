@@ -120,9 +120,17 @@ const Navbar = () => {
                                     key={link.name}
                                     href={link.href}
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className="text-lg font-medium text-industrial-600 hover:text-electric-blue transition-colors py-2 border-b border-industrial-50"
+                                    className={cn(
+                                        "text-lg font-medium py-2 border-b border-industrial-50 transition-colors flex items-center justify-between",
+                                        activeSection === link.href.substring(1)
+                                            ? "text-[#22c55e]"
+                                            : "text-industrial-600 hover:text-[#22c55e]"
+                                    )}
                                 >
-                                    {link.name}
+                                    <span>{link.name}</span>
+                                    {activeSection === link.href.substring(1) && (
+                                        <span className="w-2 h-2 rounded-full bg-[#22c55e] shadow-[0_0_8px_rgba(34,197,94,0.6)]" />
+                                    )}
                                 </a>
                             ))}
                         </nav>

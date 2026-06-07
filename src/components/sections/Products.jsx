@@ -118,7 +118,7 @@ const ProductCard = ({ product, index }) => {
 
 const Products = () => {
     return (
-        <section id="products" className="py-24 relative bg-white">
+        <section id="products" className="py-16 md:py-20 relative bg-white">
             <div className="container-custom">
                 {/* Section Header */}
                 <div className="text-center max-w-3xl mx-auto mb-16">
