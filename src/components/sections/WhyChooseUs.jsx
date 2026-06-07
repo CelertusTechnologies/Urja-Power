@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
                 <div className="flex flex-col lg:flex-row gap-16 items-start">
 
                     {/* Text Content Area */}
-                    <div className="lg:w-1/3 sticky top-32">
+                    <div className="lg:w-1/3 lg:sticky lg:top-32">
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
